@@ -1,0 +1,9 @@
+= RAD Studio
+:toc:
+:icons: font
+:source-highlighter: rouge 
+:pygments-style: emacs
+
+This repository reveals https://www.embarcadero.com/products/rad-studio[RAD Studio] redistributable https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Runtime_Packages_(Options)[packages] (*.bpl) and units built into the package.
+
+The information helps the deployment task for application built with runtime packages.
