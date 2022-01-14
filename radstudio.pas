@@ -77,6 +77,11 @@
   Winapi.shellscaling { Weak Unit  },
   Winapi.imm { Weak Unit  },
   Winapi.msctf { Weak Unit  },
+  Winapi.dxgiformat { Weak Unit  },
+  Winapi.d3dcommon { Weak Unit  },
+  Winapi.dxgitype { Weak Unit  },
+  Winapi.dxtypes { Weak Unit  },
+  Winapi.dxgi { Weak Unit  },
   Winapi.winhttp { Weak Unit  },
   System.internal.strhlpr { Weak Unit  },
   Winapi.winsock { Weak Unit  },
@@ -155,6 +160,11 @@
   Winapi.shellscaling { Weak Unit  },
   Winapi.imm { Weak Unit  },
   Winapi.msctf { Weak Unit  },
+  Winapi.dxgiformat { Weak Unit  },
+  Winapi.d3dcommon { Weak Unit  },
+  Winapi.dxgitype { Weak Unit  },
+  Winapi.dxtypes { Weak Unit  },
+  Winapi.dxgi { Weak Unit  },
   Winapi.winhttp { Weak Unit  },
   System.internal.strhlpr { Weak Unit  },
   Winapi.winsock { Weak Unit  },
@@ -214,6 +224,11 @@
   Winapi.shellscaling { Weak Unit  },
   Winapi.imm { Weak Unit  },
   Winapi.msctf { Weak Unit  },
+  Winapi.dxgiformat { Weak Unit  },
+  Winapi.d3dcommon { Weak Unit  },
+  Winapi.dxgitype { Weak Unit  },
+  Winapi.dxtypes { Weak Unit  },
+  Winapi.dxgi { Weak Unit  },
   Winapi.winhttp { Weak Unit  },
   System.internal.strhlpr { Weak Unit  },
   Winapi.winsock { Weak Unit  },
@@ -221,8 +236,8 @@
   Adodb_xp_srvr,
   Dao_xp_srvr,
   Excel_xp_srvr,
-  Frontpage_xp_srvr,
   Frontpageeditor_xp_srvr,
+  Frontpage_xp_srvr,
   Graph_xp_srvr,
   Mscomctllib_xp_srvr,
   Msdatasrc_xp_srvr,
@@ -237,8 +252,8 @@
   Bcbofficexp,
   Dao_xp,
   Excel_xp,
-  Frontpage_xp,
   Frontpageeditor_xp,
+  Frontpage_xp,
   Graph_xp,
   Mscomctllib_xp,
   Msdatasrc_xp,
@@ -390,10 +405,24 @@
   { RequirePackage: rtl }
   Vcl.Bind.Navigator,
   Vcl.Bind.Grid,
-  Vcl.Bind.GenData,
   Vcl.Bind.Consts,
+  Vcl.Bind.GenData,
   Vcl.Bind.Editors,
   Vcl.Bind.DBEngExt,
+  {$endregion}
+  {$region 'bindcompvclsmp : Embarcadero LiveBindings Components VCL Samples'}
+  { RequirePackage: VclSmp }
+  { RequirePackage: bindcompvcl }
+  { RequirePackage: bindcomp }
+  { RequirePackage: rtl }
+  Vcl.Samples.Bind.Editors,
+  {$endregion}
+  {$region 'bindcompvclwinx : Embarcadero LiveBindings Components VCL WinX'}
+  { RequirePackage: vclwinx }
+  { RequirePackage: bindcompvcl }
+  { RequirePackage: bindcomp }
+  { RequirePackage: rtl }
+  Vcl.Bind.ControlList,
   {$endregion}
   {$region 'bindengine : Embarcadero LiveBindings Runtime Package'}
   { RequirePackage: rtl }
@@ -575,12 +604,13 @@
   {$endregion}
   {$region 'dbrtl : Embarcadero Core Database Components'}
   { RequirePackage: rtl }
-  Data.DBByteBuffer,
-  Data.DBCommonTypes,
-  Data.SqlTimSt,
-  Data.DBConsts,
-  Data.FmtBcd,
+  Data.DBJson,
   Data.DB,
+  Data.DBConsts,
+  Data.DBCommonTypes,
+  Data.FmtBcd,
+  Data.SqlTimSt,
+  Data.DBByteBuffer,
   Data.DBCommon,
   {$endregion}
   {$region 'dbxcds : Embarcadero SimpleDataSet Component (DBX)'}
@@ -803,6 +833,10 @@
   {$endregion}
   {$region 'DUnitXRuntime : Embarcadero Unit Testing IDE Package'}
   { RequirePackage: rtl }
+  DUnitX.TestDataProvider,
+  DUnitX.InternalDataProvider,
+  DUnitX.Types,
+  DUnitX.Helpers,
   DUnitX.Timeout,
   DUnitX.Exceptions,
   DUnitX.ResStrs,
@@ -817,19 +851,19 @@
   DUnitX.Filters,
   DUnitX.Extensibility,
   DUnitX.Generics,
-  DUnitX.Types,
   DUnitX.FixtureProviderPlugin,
+  DUnitX.InternalInterfaces,
   DUnitX.Attributes,
   DUnitX.MemoryLeakMonitor.Default,
   DUnitX.IoC,
   DUnitX.TestRunner,
   DUnitX.Extensibility.PluginManager,
   DUnitX.FixtureResult,
-  DUnitX.InternalInterfaces,
   DUnitX.TestResult,
   DUnitX.RunResults,
   DUnitX.TestFixture,
   DUnitX.Test,
+  DUnitX.Assert,
   DUnitX.CommandLine.Options,
   DUnitX.CommandLine.OptionDef,
   DUnitX.CommandLine.Parser,
@@ -837,7 +871,6 @@
   DUnitX.Banner,
   DUnitX.ConsoleWriter.Base,
   DUnitX.Assert.Ex,
-  DUnitX.Assert,
   DUnitX.Init,
   DUnitX.Utils.XML,
   DUnitX.StackTrace.MadExcept4,
@@ -856,7 +889,7 @@
   DUnitX.ComparableFormat.Xml,
   DUnitX.ComparableFormat.Csv,
   {$endregion}
-  {$region 'emsclient : Embarcadero EMS client package'}
+  {$region 'emsclient : Embarcadero RAD Server client package'}
   { RequirePackage: RESTBackendComponents }
   { RequirePackage: RESTComponents }
   { RequirePackage: rtl }
@@ -867,7 +900,7 @@
   REST.Backend.EMSProvider,
   REST.Backend.EMSServices,
   {$endregion}
-  {$region 'emsclientfiredac : Embarcadero EMS FireDAC client package'}
+  {$region 'emsclientfiredac : Embarcadero RAD Server FireDAC client package'}
   { RequirePackage: emsclient }
   { RequirePackage: FireDAC }
   { RequirePackage: rtl }
@@ -893,7 +926,7 @@
   EMSHosting.EdgeHTTPServer,
   EMSHosting.EdgeHTTPListener,
   {$endregion}
-  {$region 'emshosting : Embarcadero EMS hosting package'}
+  {$region 'emshosting : Embarcadero RAD Server hosting package'}
   { RequirePackage: emsserverapi }
   { RequirePackage: rtl }
   EMSHosting.APIDocConsts,
@@ -909,29 +942,38 @@
   EMSHosting.ExtensionsServices,
   EMSHosting.EdgePayload,
   {$endregion}
-  {$region 'emsserverapi : Embarcadero EMS server API package'}
+  {$region 'emsserverapi : Embarcadero RAD Server server API package'}
   { RequirePackage: rtl }
   EMS.ResourceAPI,
   EMS.Consts,
   EMS.ResourceTypes,
   EMS.Services,
   {$endregion}
+  {$region 'emsserverresource : Embarcadero RAD Server server resources package'}
+  { RequirePackage: FireDAC }
+  { RequirePackage: FireDACCommon }
+  { RequirePackage: FireDACCommonDriver }
+  { RequirePackage: dbrtl }
+  { RequirePackage: rtl }
+  { RequirePackage: emsserverapi }
+  EMS.FileResource,
+  EMS.DataSetResource,
+  {$endregion}
   {$region 'FireDAC : Embarcadero FireDAC Database Components'}
-  { RequirePackage: FireDACSqliteDriver }
   { RequirePackage: FireDACCommonDriver }
   { RequirePackage: FireDACCommon }
   { RequirePackage: dbrtl }
   { RequirePackage: rtl }
-  FireDAC.Phys.SQLiteVDataSet,
-  FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client,
   FireDAC.Comp.UI,
   FireDAC.Comp.ScriptCommands,
   FireDAC.Comp.BatchMove.SQL,
+  FireDAC.Comp.DataSet,
   FireDAC.Comp.BatchMove.DataSet,
   FireDAC.Comp.BatchMove,
+  FireDAC.Comp.Client,
   FireDAC.Comp.BatchMove.Text,
   FireDAC.Comp.Script,
+  FireDAC.Comp.BatchMove.JSON,
   {$endregion}
   {$region 'FireDACADOIntegrate : Embarcadero FireDAC ADO Integration units'}
   { RequirePackage: FireDACCommon }
@@ -1166,11 +1208,14 @@
   {$endregion}
   {$region 'FireDACSqliteDriver : Embarcadero FireDAC Sqlite Driver Components'}
   { RequirePackage: FireDACCommonDriver }
+  { RequirePackage: FireDAC }
   { RequirePackage: dbrtl }
   { RequirePackage: rtl }
-  FireDAC.Phys.SQLiteDef,
+  FireDAC.Phys.SQLiteVDataSet,
   FireDAC.Phys.SQLiteWrapper,
   FireDAC.Phys.SQLiteCli,
+  FireDAC.Phys.SQLiteDef,
+  FireDAC.Phys.SQLiteWrapper.Stat,
   FireDAC.Phys.SQLite,
   {$endregion}
   {$region 'FireDACTDataDriver : Embarcadero FireDAC Teradata Driver Components'}
@@ -1182,20 +1227,12 @@
   {$endregion}
   {$region 'fmx : Embarcadero FMX Component Library'}
   { RequirePackage: rtl }
-  FMX.AddressBook.Types,
-  FMX.Consts,
-  FMX.Platform,
-  FMX.Clipboard,
-  FMX.Clipboard.Win,
-  FMX.Helpers.Win,
+  FMX.BufferedLayout,
+  FMX.Text,
   FMX.Utils,
+  FMX.Consts,
   FMX.Types,
   FMX.Styles,
-  FMX.Graphics,
-  FMX.TextLayout,
-  FMX.Text,
-  FMX.Surfaces,
-  FMX.BehaviorManager,
   FMX.Forms,
   FMX.AcceleratorKey,
   FMX.StdActns,
@@ -1203,26 +1240,29 @@
   FMX.Controls,
   FMX.Menus,
   FMX.MultiResBitmap,
-  FMX.DialogService,
-  FMX.Dialogs,
-  FMX.DialogService.Sync,
-  FMX.Objects,
-  FMX.FontGlyphs,
-  FMX.FontGlyphs.Win,
-  FMX.ActnList,
+  FMX.Graphics,
+  FMX.TextLayout,
+  FMX.Platform,
+  FMX.Clipboard,
+  FMX.Clipboard.Win,
+  FMX.Helpers.Win,
+  FMX.Surfaces,
   FMX.ImgList,
-  FMX.Gestures,
-  FMX.Gestures.Win,
+  FMX.ActnList,
+  FMX.Platform.Common,
+  FMX.BehaviorManager,
   FMX.Platform.Win,
   FMX.Forms.Border,
   FMX.Controls.Presentation,
   FMX.Presentation.Win,
-  FMX.Presentation.Factory,
-  FMX.Controls.Model,
-  FMX.Presentation.Messages,
+  FMX.ZOrder,
   FMX.ZOrder.Win,
+  FMX.Presentation.Messages,
+  FMX.Controls.Model,
   FMX.Controls.Win,
   FMX.Presentation.Win.Style,
+  FMX.Presentation.Factory,
+  FMX.Presentation.Style.Common,
   FMX.Ani,
   FMX.Presentation.Style,
   FMX.Effects,
@@ -1234,7 +1274,12 @@
   FMX.Switch.Win,
   FMX.Styles.Switch,
   FMX.Styles.Objects,
+  FMX.Objects,
+  FMX.FontGlyphs,
+  FMX.FontGlyphs.Win,
   FMX.Switch.Style,
+  FMX.Dialogs,
+  FMX.DialogService.Sync,
   FMX.MultiTouch,
   FMX.AcceleratorKey.Win,
   FMX.KeyMapping,
@@ -1242,6 +1287,9 @@
   FMX.WebBrowser.Win,
   FMX.Controls.Ole,
   FMX.MultiTouch.Win,
+  FMX.Gestures.Win,
+  FMX.Gestures,
+  FMX.DialogService,
   FMX.Forms.Border.Win,
   FMX.Edit,
   FMX.Edit.Win,
@@ -1274,14 +1322,15 @@
   FMX.DialogHelper,
   FMX.Dialogs.Default,
   FMX.Header,
-  FMX.Platform.Common,
+  FMX.WindowsStore,
+  FMX.AddressBook.Types,
   FMX.AddressBook,
   FMX.Memo.Win,
   FMX.ScrollBox,
   FMX.ScrollBox.Win,
   FMX.ScrollBox.Style,
   FMX.Memo,
-  FMX.Memo.Style,
+  FMX.Memo.Style.New,
   FMX.Memo.Types,
   FMX.MultiView.Types.Style,
   FMX.MultiView.Types,
@@ -1307,6 +1356,7 @@
   FMX.MultiView.Presentations,
   FMX.MultiView,
   FMX.MobilePreview,
+  FMX.Memo.Style,
   FMX.MediaLibrary.Actions,
   FMX.MediaLibrary,
   FMX.Media.Win,
@@ -1333,6 +1383,7 @@
   FMX.CalendarEdit,
   FMX.Analytics.AppAnalytics,
   FMX.Analytics,
+  FMX.Advertising.Firebase,
   FMX.Advertising,
   {$endregion}
   {$region 'fmxase : Embarcadero FMX ASE Import Library'}
@@ -1347,7 +1398,9 @@
   { RequirePackage: fmx }
   { RequirePackage: xmlrtl }
   { RequirePackage: rtl }
+  FMX.DAE.Schema.MathTypes,
   FMX.DAE.Schema,
+  FMX.DAE.Schema.GLES,
   FMX.DAE.Model,
   FMX.DAE.Importer,
   {$endregion}
@@ -1444,6 +1497,7 @@
   { RequirePackage: rtl }
   IBX.IBInputOutput,
   IBX.IBIntf,
+  IBX.IBErrorCodes,
   IBX.IBXConst,
   IBX.IBXMLHeader,
   IBX.IB,
@@ -1451,9 +1505,8 @@
   IBX.IBHeader,
   IBX.IBExternals,
   IBX.IBServices,
-  IBX.IBUtils,
   IBX.IBSQL,
-  IBX.IBErrorCodes,
+  IBX.IBUtils,
   IBX.IBBlob,
   IBX.IBCustomDataSet,
   IBX.IBDatabase,
@@ -1484,23 +1537,32 @@
   IdSocketHandle,
   IdThread,
   IdResourceStringsCore,
+  IdScheduler,
   IdThreadSafe,
   IdTask,
-  IdUDPClient,
+  IdSchedulerOfThread,
+  IdExceptionCore,
+  IdTCPServer,
+  IdCustomTCPServer,
+  IdSchedulerOfThreadDefault,
+  IdContext,
+  IdIOHandlerSocket,
   IdSocks,
   IdTCPConnection,
   IdReplyRFC,
   IdReply,
   IdIOHandlerStack,
   IdCustomTransparentProxy,
-  IdExceptionCore,
   IdIOHandler,
   IdIntercept,
   IdBuffer,
-  IdIOHandlerSocket,
   IdTCPClient,
   IdIPAddress,
   IdAssignedNumbers,
+  IdServerIOHandlerStack,
+  IdServerIOHandlerSocket,
+  IdServerIOHandler,
+  IdUDPClient,
   IdTraceRoute,
   IdRawClient,
   IdRawBase,
@@ -1508,15 +1570,6 @@
   IdRawHeaders,
   IdThreadComponent,
   IdTCPStream,
-  IdTCPServer,
-  IdCustomTCPServer,
-  IdSchedulerOfThreadDefault,
-  IdContext,
-  IdScheduler,
-  IdSchedulerOfThread,
-  IdServerIOHandlerStack,
-  IdServerIOHandlerSocket,
-  IdServerIOHandler,
   IdSync,
   IdSimpleServer,
   IdSchedulerOfThreadPool,
@@ -1812,12 +1865,12 @@
   {$region 'IndySystem : Indy 10 System'}
   { RequirePackage: rtl }
   IdWship6,
+  IdWinsock2,
+  IdResourceStrings,
   IdGlobal,
   IdStreamVCL,
   IdStream,
-  IdResourceStrings,
   IdException,
-  IdWinsock2,
   IdStruct,
   IdStackWindows,
   IdIDN,
@@ -1975,81 +2028,91 @@
   REST.Authenticator.Basic,
   {$endregion}
   {$region 'rtl : Embarcadero Run Time Library'}
-  Winapi.WebRT,
+  WinAPI.WinRT.Utils,
+  System.Win.WinRT,
+  System.RTLConsts,
+  System.TypInfo,
+  System.SysConst,
+  System.Rtti,
+  System.Math,
+  System.Types,
   System.SysUtils,
   System.Internal.ExcUtils,
-  System.SysConst,
   System.Character,
-  System.RTLConsts,
   Winapi.Windows { Weak Unit  },
   System.UITypes,
-  System.Types,
   Winapi.PsAPI { Weak Unit  },
   Winapi.SHFolder,
   Winapi.ImageHlp,
-  System.TypInfo,
-  System.Rtti,
-  System.Math,
   System.Hash,
   System.Classes,
+  System.Diagnostics,
+  System.TimeSpan,
   System.Variants,
   System.VarUtils,
   System.Generics.Collections,
   System.Generics.Defaults,
   Winapi.ActiveX { Weak Unit  },
   Winapi.Messages { Weak Unit  },
-  System.Win.WinRT,
   Winapi.WinRT,
+  Winapi.Foundation,
+  Winapi.CommonNames,
   Winapi.Foundation.Types,
   Winapi.CommonTypes,
-  Winapi.Foundation,
+  WinAPI.WindowsStore,
+  WinAPI.HSTRINGIterables,
+  Winapi.ServicesRT.Store,
+  Winapi.WebRT,
   Winapi.Security.Credentials,
   Winapi.Storage.Streams,
-  Winapi.Foundation.Collections,
-  Winapi.DataRT,
-  Winapi.Storage,
   Winapi.Security.Cryptography,
-  Winapi.Networking,
   Winapi.UI.Xaml,
-  Winapi.Globalization,
-  Winapi.ApplicationModel.Background,
-  Winapi.Devices.Bluetooth,
-  Winapi.Networking.Sockets,
-  Winapi.Networking.Connectivity,
-  Winapi.Devices,
-  Winapi.Devices.Enumeration,
+  Winapi.ServicesRT,
+  Winapi.SystemRT,
+  Winapi.Storage,
+  Winapi.Devices.Geolocation,
+  Winapi.DataRT,
+  Winapi.ApplicationModel,
+  Winapi.ApplicationModel.Core,
+  Winapi.Media,
+  Winapi.Perception,
   Winapi.Media.Devices,
   Winapi.Media.MediaProperties,
-  Winapi.Media,
   Winapi.GraphicsRT,
-  Winapi.UI.Input.Inking,
-  Winapi.UI.Core,
-  Winapi.UI.Input,
-  Winapi.ApplicationModel,
-  Winapi.Security,
-  Winapi.SystemRT,
-  Winapi.ApplicationModel.DataTransfer,
-  Winapi.UI.Text,
-  Winapi.UI.ViewManagement,
-  Winapi.UI,
   Winapi.UI.WebUI,
+  Winapi.UI.ViewManagement,
+  Winapi.UI.Text,
   Winapi.UI.Notifications,
+  Winapi.UI.Input.Inking,
   Winapi.UI.Composition,
+  Winapi.Devices,
+  Winapi.Networking.Sockets,
+  Winapi.Networking,
+  Winapi.UI.Input,
+  Winapi.UI.Core,
+  Winapi.UI,
+  Winapi.Security,
   Winapi.Networking.Vpn,
   Winapi.Networking.Proximity,
   Winapi.Networking.NetworkOperators,
-  Winapi.Devices.Sms,
+  Winapi.Networking.Connectivity,
   Winapi.Management,
+  Winapi.Globalization,
   Winapi.Gaming,
+  Winapi.Foundation.Collections,
+  Winapi.Devices.Sms,
   Winapi.Devices.Sensors,
   Winapi.Devices.Scanners,
   Winapi.Devices.PointOfService,
   Winapi.Devices.Midi,
-  Winapi.Devices.Geolocation,
+  Winapi.Devices.Enumeration,
+  Winapi.ApplicationModel.Background,
   Winapi.Devices.Bluetooth.Advertisement,
+  Winapi.Devices.Bluetooth,
   Winapi.Devices.AllJoyn,
-  Winapi.ApplicationModel.Core,
+  Winapi.ApplicationModel.DataTransfer,
   Winapi.ApplicationModel.Contacts,
+  Winapi.Networking.PushNotifications,
   Winapi.WMF9 { Weak Unit  },
   Winapi.DirectShow9 { Weak Unit  },
   System.Win.ComObj,
@@ -2057,8 +2120,6 @@
   System.AnsiStrings,
   System.StrUtils,
   System.SyncObjs,
-  System.Diagnostics,
-  System.TimeSpan,
   Winapi.MMSystem { Weak Unit  },
   Winapi.Direct3D9 { Weak Unit  },
   Winapi.DXTypes { Weak Unit  },
@@ -2076,6 +2137,7 @@
   Winapi.CorError { Weak Unit  },
   Winapi.WinInet { Weak Unit  },
   Winapi.WinHTTP { Weak Unit  },
+  Winapi.WinCred,
   Winapi.Wincodec,
   Winapi.Wbem { Weak Unit  },
   Winapi.UxTheme,
@@ -2106,8 +2168,8 @@
   Winapi.PropKey { Weak Unit  },
   Winapi.PenWin { Weak Unit  },
   Winapi.PenInputPanel { Weak Unit  },
-  Winapi.OpenGLext,
-  Winapi.OpenGL,
+  Winapi.OpenGLext { Weak Unit  },
+  Winapi.OpenGL { Weak Unit  },
   Winapi.OleDlg { Weak Unit  },
   Winapi.OleDB,
   Winapi.oleacc,
@@ -2206,11 +2268,11 @@
   System.Messaging,
   System.Notification,
   System.Net.HttpClient.Win,
-  System.Net.HttpClient,
-  System.NetEncoding,
-  System.NetConsts,
-  System.ZLib,
   System.Net.Mime,
+  System.NetConsts,
+  System.NetEncoding,
+  System.Net.HttpClient,
+  System.ZLib,
   System.Net.URLClient,
   System.Threading,
   System.Win.Sensors,
@@ -2232,9 +2294,9 @@
   System.JSONConsts,
   System.JSON,
   System.Internal.DebugUtils,
+  System.Odbc { Weak Unit  },
   System.WideStrUtils,
   System.WideStrings,
-  System.Odbc { Weak Unit  },
   System.Contnrs,
   System.PushNotification,
   System.ImageList,
@@ -2262,6 +2324,7 @@
   System.RegularExpressionsConsts,
   System.RegularExpressionsAPI { Weak Unit  },
   System.RegularExpressions,
+  System.Permissions,
   System.Math.Vectors,
   System.MaskUtils,
   System.HelpIntfs,
@@ -2281,12 +2344,12 @@
   { RequirePackage: rtl }
   Soap.Win.CertHelper,
   Soap.WSDLLookup,
+  Soap.WSDLIntf,
+  Soap.SOAPConst,
+  Soap.WSDLItems,
+  Soap.WSDLBind,
   Soap.HTTPUtil,
   Soap.SOAPHTTPTrans,
-  Soap.WSDLItems,
-  Soap.SOAPConst,
-  Soap.WSDLIntf,
-  Soap.WSDLBind,
   Soap.UDDIHelper,
   Soap.SOAPHTTPClient,
   Soap.WebNode,
@@ -2487,14 +2550,15 @@
   Vcl.Consts,
   Vcl.Taskbar,
   Vcl.ImgList,
+  Vcl.Controls,
+  Vcl.GraphUtil,
+  Vcl.Graphics,
   Vcl.Themes,
   Vcl.Dialogs,
   Vcl.ExtCtrls,
-  Vcl.GraphUtil,
-  Vcl.Graphics,
   Vcl.StdCtrls,
   Vcl.ActnList,
-  Vcl.Controls,
+  Vcl.Menus,
   Vcl.Forms,
   Vcl.StdActns,
   Vcl.ComCtrls,
@@ -2502,16 +2566,15 @@
   Vcl.Printers,
   Vcl.ListActns,
   Vcl.ToolWin,
-  Vcl.Menus,
   Vcl.Clipbrd,
   Vcl.SysStyles,
   Vcl.Styles,
+  Vcl.Direct2D,
   Vcl.ButtonGroup,
   Vcl.CategoryButtons,
   Vcl.Grids,
   Vcl.Mask,
   Vcl.ShareContract,
-  Vcl.Direct2D,
   Vcl.ShellAnimations { Weak Unit  },
   Vcl.IMouse,
   Vcl.DockTabSet,
@@ -2555,6 +2618,7 @@
   {$endregion}
   {$region 'vcldb : Embarcadero Database Components'}
   { RequirePackage: dbrtl }
+  { RequirePackage: vclwinx }
   { RequirePackage: vcl }
   { RequirePackage: rtl }
   Vcl.DBPWDlg,
@@ -2574,6 +2638,13 @@
   { RequirePackage: rtl }
   Vcl.recerror,
   Vcl.DBClientActns,
+  {$endregion}
+  {$region 'vcledge : Edge WebView2 Component Runtime Package'}
+  { RequirePackage: vcl }
+  { RequirePackage: rtl }
+  Vcl.EdgeConst,
+  Vcl.Edge,
+  WebView2,
   {$endregion}
   {$region 'vclFireDAC : Embarcadero FireDAC VCL Forms Components'}
   { RequirePackage: FireDAC }
@@ -2611,6 +2682,7 @@
   IBX.IBFilterDialog,
   {$endregion}
   {$region 'vclie : Internet Explorer Components Runtime Package'}
+  { RequirePackage: vcledge }
   { RequirePackage: vcl }
   { RequirePackage: rtl }
   IEConst,
@@ -2643,6 +2715,23 @@
   { RequirePackage: rtl }
   REST.Authenticator.OAuth.WebForm.Win,
   {$endregion}
+  {$region 'vclribbon : Embarcadero Ribbon Components'}
+  { RequirePackage: vclimg }
+  { RequirePackage: vclx }
+  { RequirePackage: vclactnband }
+  { RequirePackage: vcl }
+  { RequirePackage: rtl }
+  Vcl.ScreenTips,
+  Vcl.RibbonConsts,
+  Vcl.RibbonSilverStyleActnCtrls,
+  Vcl.Ribbon,
+  Vcl.RibbonLunaStyleActnCtrls,
+  Vcl.RibbonStyleActnCtrls,
+  Vcl.RibbonActnMenus,
+  Vcl.RibbonActnCtrls,
+  Vcl.RibbonGalleryBar,
+  Vcl.RibbonObsidianStyleActnCtrls,
+  {$endregion}
   {$region 'vclshlctrls : Win32 Shell Controls'}
   { RequirePackage: vcl }
   { RequirePackage: rtl }
@@ -2672,7 +2761,18 @@
   {$region 'vclwinx : Embarcadero WinX Controls'}
   { RequirePackage: vclimg }
   { RequirePackage: vcl }
+  { RequirePackage: bindengine }
   { RequirePackage: rtl }
+  Vcl.NumberBox,
+  Vcl.ControlList,
+  Vcl.TitleBarCtrls,
+  Vcl.WindowsStore,
+  Vcl.VirtualImage,
+  Vcl.BaseImageCollection,
+  Vcl.VirtualImageList,
+  Vcl.ImageCollection,
+  Vcl.WinXPickers,
+  Vcl.WinXPanels,
   Vcl.WinXCalendars,
   Vcl.WinXCtrls,
   {$endregion}
@@ -2693,6 +2793,10 @@
   Xml.Internal.WideStringUtils,
   Xml.XMLConst,
   Xml.Internal.OmniXML,
+  Xml.Internal.XmlInputSource,
+  Xml.Internal.ParserUtilsWin32,
+  Xml.Internal.CodecUtilsWin32,
+  Xml.Internal.EncodingUtils,
   Xml.Internal.OmniXMLXPath,
   Xml.Internal.OTextReadWrite,
   Xml.Internal.OBufferedStreams,
@@ -2704,9 +2808,6 @@
   Xml.Internal.UriUtils,
   Xml.Internal.AbnfUtils,
   Xml.Internal.LangUtils,
-  Xml.Internal.ParserUtilsWin32,
-  Xml.Internal.CodecUtilsWin32,
-  Xml.Internal.EncodingUtils,
   Xml.Internal.TreeUtils,
   Xml.adomxmldom,
   Xml.XMLIniFile,
