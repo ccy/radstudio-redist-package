@@ -1396,6 +1396,12 @@
   FMX.Advertising.Firebase,
   FMX.Advertising,
   {$endregion}
+  {$region 'fmxaccessibility : Embarcadero FMX Accessibility Component Library'}
+  { RequirePackage: fmx }
+  { RequirePackage: rtl }
+  FMX.ScreenReader.Win,
+  FMX.ScreenReader,
+  {$endregion}
   {$region 'fmxase : Embarcadero FMX ASE Import Library'}
   { RequirePackage: fmx }
   { RequirePackage: xmlrtl }
