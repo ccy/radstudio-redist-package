@@ -984,6 +984,7 @@
   { RequirePackage: adortl }
   { RequirePackage: dbrtl }
   { RequirePackage: rtl }
+  FireDAC.ADO.Migrate,
   FireDAC.ADO.LocalSQL,
   FireDAC.ADO.Import,
   {$endregion}
