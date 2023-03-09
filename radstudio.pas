@@ -1392,6 +1392,7 @@
   FMX.Colors,
   FMX.CalendarEdit.Style,
   FMX.CalendarEdit,
+  FMX.BiometricAuth,
   FMX.Analytics.AppAnalytics,
   FMX.Analytics,
   FMX.Advertising.Firebase,
@@ -1441,6 +1442,9 @@
   FMX.OBJ.Importer,
   {$endregion}
   {$region 'FMXRESTComponents : Embarcadero REST Client Components FMX'}
+  { RequirePackage: RESTComponents }
+  { RequirePackage: bindcomp }
+  { RequirePackage: bindengine }
   { RequirePackage: fmx }
   { RequirePackage: rtl }
   REST.Authenticator.OAuth.WebForm.FMX,
@@ -2682,6 +2686,9 @@
   Vcl.Imaging.GIFConsts,
   {$endregion}
   {$region 'VCLRESTComponents : Embarcadero REST Client Components VCL'}
+  { RequirePackage: RESTComponents }
+  { RequirePackage: bindcomp }
+  { RequirePackage: bindengine }
   { RequirePackage: vclie }
   { RequirePackage: vcl }
   { RequirePackage: rtl }
